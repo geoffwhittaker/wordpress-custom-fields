@@ -40,14 +40,14 @@ The key in this case is "tech" and has the values of PHP, JavaScript and WordPre
 ```
 <?php /** custom field for post subject, display*/   ?
 <?php $value = get_post_meta($post->ID, 'tech', true); 
-echo 'Find out more about...';
- if($value == 'php') { 
- echo '<a http://php.net/">PHP.net</a>'; 
- } elseif($value == 'javascript') { 
- echo '<a href="https://www.javascript.com/">Javascript docs</a>'; 
- } elseif($value == 'wordpress') { 
+   echo 'Find out more about...';
+   if($value == 'php') { 
+   echo '<a http://php.net/">PHP.net</a>'; 
+  } elseif($value == 'javascript') { 
+  echo '<a href="https://www.javascript.com/">Javascript docs</a>'; 
+  } elseif($value == 'wordpress') { 
  	echo '<a href="https://en-gb.wordpress.org/">WordPress</a>'; 
- } else { 
+  } else { 
     	echo '<a http://www.smallbusinesswebdesignnorthwest.co.uk/">This site</a>'; 
  	} 
 	?> 
