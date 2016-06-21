@@ -26,7 +26,7 @@ To display multiple items with the same key you can use a for each loop.
           <ul>
 		!<?php foreach($Fruits as $fruit) {
 			echo '<li>'.$fruit.'</li>';
-			} ?>
+	         	} ?>
           </ul>
       
 
