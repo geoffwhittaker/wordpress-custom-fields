@@ -29,7 +29,7 @@ To display multiple items with the same key you can use a for each loop.
 	         	} ?>
           </ul>
  ```     
-
+Add the code to the WordPress loop in the single.php file in the location you want to display the list.
 ###Display content depending on the key value
 >Add a link to a detail page depending  on the subject of a post.
 
