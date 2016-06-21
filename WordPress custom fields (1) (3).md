@@ -37,7 +37,8 @@ To display multiple items with the same key you can use a for each loop.
 Condtional statements can be used to test for a particular value and dsiplay diiferent content. In the code shown below an "elseif" loop checks for the stored custom field value and displays a link dependant on  the value of the custom field. If no value is found a link to the home page is shown.
 The key in this case is "tech" and has the values of PHP, JavaScript and WordPress.
 ![ back end custom field entry](https://raw.githubusercontent.com/geoffwhittaker/wordpress-custom-fields/master/back-end-tech-field.png)
-```<?php /** custom field for post subject, display*/   ?
+```
+<?php /** custom field for post subject, display*/   ?
 <?php $value = get_post_meta($post->ID, 'tech', true); 
 echo 'Find out more about...';
  if($value == 'php') { 
@@ -49,7 +50,8 @@ echo 'Find out more about...';
  } else { 
     	echo '<a http://www.smallbusinesswebdesignnorthwest.co.uk/">This site</a>'; 
  	} 
-	?> ```
+	?> 
+```
 
 The code is placed in your themes single.php file where you want the link to appear. 
 
