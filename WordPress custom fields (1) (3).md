@@ -20,7 +20,7 @@ To add a specific key use the "get-post-meta" function. replace the "key" with y
 The frontend display is shown here.
 
 To display multiple items with the same key you can use a for each loop.
-
+```php
        <?php $Fruits = get_post_meta($post->ID, 'Fruits', false); ?>
 	 <h3>Today's fruits are:</h3>
           <ul>
@@ -28,7 +28,7 @@ To display multiple items with the same key you can use a for each loop.
 			echo '<li>'.$fruit.'</li>';
 	         	} ?>
           </ul>
-      
+ ```     
 
 ###Display content depending on the key value
 >Add a link to a detail page depending  on the subject of a post.
@@ -37,7 +37,7 @@ To display multiple items with the same key you can use a for each loop.
 Condtional statements can be used to test for a particular value and dsiplay diiferent content. In the code shown below an "elseif" loop checks for the stored custom field value and displays a link dependant on  the value of the custom field. If no value is found a link to the home page is shown.
 The key in this case is "tech" and has the values of PHP, JavaScript and WordPress.
 ![ back end custom field entry](https://raw.githubusercontent.com/geoffwhittaker/wordpress-custom-fields/master/back-end-tech-field.png)
-```
+```php
 <?php /** custom field for post subject, display*/   ?
 <?php $value = get_post_meta($post->ID, 'tech', true); 
    echo 'Find out more about...';
@@ -63,7 +63,7 @@ The code is placed in your themes single.php file where you want the link to app
 If you have ever worked with HTML blocks in WordPress you will find that the text editor does not save HTML in the case of switching between text mode and visual mode. To obviate this problem you can add a block of code such as a widget or iframe to a custom field. A short code can then be used to place it in the post.
  Add the code below to your functions.php file.
  
-```
+```php
 function field_func($atts){
 			global $post;
 			$name = $atts ['name'];
