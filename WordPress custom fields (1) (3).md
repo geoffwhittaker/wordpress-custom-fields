@@ -63,7 +63,8 @@ The code is placed in your themes single.php file where you want the link to app
 If you have ever worked with HTML blocks in WordPress you will find that the text editor does not save HTML in the case of switching between text mode and visual mode. To obviate this problem you can add a block of code such as a widget or iframe to a custom field. A short code can then be used to place it in the post.
  Add the code below to your functions.php file.
  
-`function field_func($atts){
+```
+function field_func($atts){
 			global $post;
 			$name = $atts ['name'];
 			if (empty($name)) return;
@@ -74,6 +75,7 @@ If you have ever worked with HTML blocks in WordPress you will find that the tex
  Then go to the location in the post where you want to place the content and add the shorcode in the format:
  
  [field name=key]
+ ```
  
 The key should be the name of the custom field. The saved content will then be displayed.
 >**How it works**- the Add_shortcode() function has two parameters, the first is the name to use as a "tag" (in this case "field") ,this is used to reference the added content in the post. the second is the function to run when the shotcode is called. The format of the shortcode is  [field name=weather]
