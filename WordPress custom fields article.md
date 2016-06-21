@@ -17,6 +17,7 @@ To add a specific key use the "get-post-meta" function. replace the "key" with y
 `<?php echo get_post_meta($post->ID, 'key', true); ?>`
 
 ![Fruits display](https://raw.githubusercontent.com/geoffwhittaker/wordpress-custom-fields/master/fruits_display.png)
+
 The frontend display is shown here.
 
 To display multiple items with the same key you can use a for each loop.
