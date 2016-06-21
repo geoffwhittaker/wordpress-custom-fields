@@ -16,15 +16,15 @@ This will add all the custom fields at once.
 To add a specific key use the "get-post-meta" function. replace the "key" with your actual key for example fruit.
 `<?php echo get_post_meta($post->ID, 'key', true); ?>`
 
-The frontend display is shown here.
 ![Fruits display](https://raw.githubusercontent.com/geoffwhittaker/wordpress-custom-fields/master/fruits_display.png)
+The frontend display is shown here.
 
 To display multiple items with the same key you can use a for each loop.
 
        <?php $Fruits = get_post_meta($post->ID, 'Fruits', false); ?>
 	 <h3>Today's fruits are:</h3>
           <ul>
-		!<?php foreach($Fruits as $fruit) {
+		<?php foreach($Fruits as $fruit) {
 			echo '<li>'.$fruit.'</li>';
 	         	} ?>
           </ul>
